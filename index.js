@@ -8,3 +8,8 @@ function listTasks() {
         console.log(`${index + 1}. [${task.completed ? 'X' : ' '}] ${task.title}`);
     });
 }
+function completeTask(index) {
+    if (tasks[index]) {
+        tasks[index].completed = true;
+    }
+}
