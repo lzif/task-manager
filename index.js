@@ -13,3 +13,8 @@ function completeTask(index) {
         tasks[index].completed = true;
     }
 }
+function deleteTask(index) {
+    if (tasks[index]) {
+        tasks.splice(index, 1);
+    }
+}
