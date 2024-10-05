@@ -1,7 +1,7 @@
 const tasks = [];
 
 function addTask(title) {
-    tasks.push({ title, completed: false, priority: "normal" });
+    tasks.push({ title, completed: false });
 }
 function listTasks() {
     tasks.forEach((task, index) => {
@@ -16,10 +16,5 @@ function completeTask(index) {
 function deleteTask(index) {
     if (tasks[index]) {
         tasks.splice(index, 1);
-    }
-}
-function setPriority(index, priority) {
-    if (tasks[index]) {
-        tasks[index].priority = priority;
     }
 }
