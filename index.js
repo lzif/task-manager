@@ -23,3 +23,8 @@ function setPriority(index, priority) {
         tasks[index].priority = priority;
     }
 }
+function addCategory(index, category) {
+    if (tasks[index]) {
+        tasks[index].category = category;
+    }
+}
