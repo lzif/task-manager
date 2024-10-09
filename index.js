@@ -28,3 +28,8 @@ function addCategory(index, category) {
         tasks[index].category = category;
     }
 }
+function setDueDate(index, date) {
+    if (tasks[index]) {
+        tasks[index].dueDate = date;
+    }
+}
