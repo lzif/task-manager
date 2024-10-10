@@ -33,3 +33,10 @@ function setDueDate(index, date) {
         tasks[index].dueDate = date;
     }
 }
+function filterTasks(criteria) {
+    return tasks.filter(task => {
+        return (!criteria.completed || task.completed === criteria.completed) &&
+               (!criteria.priority || task.priority === criteria.priority) &&
+               (!criteria.category || task.category === criteria.category);
+    });
+}
