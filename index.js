@@ -40,3 +40,8 @@ function filterTasks(criteria) {
                (!criteria.category || task.category === criteria.category);
     });
 }
+function searchTasks(query) {
+    return tasks.filter(task => 
+        task.title.toLowerCase().includes(query.toLowerCase())
+    );
+}
