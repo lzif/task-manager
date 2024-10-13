@@ -45,3 +45,12 @@ function searchTasks(query) {
         task.title.toLowerCase().includes(query.toLowerCase())
     );
 }
+function addNote(index, note) {
+    if (tasks[index]) {
+        if (!tasks[index].notes) tasks[index].notes = [];
+        tasks[index].notes.push({
+            text: note,
+            date: new Date().toISOString()
+        });
+    }
+}
