@@ -11,3 +11,13 @@ function showMenu() {
     console.log('3. Complete Task');
     console.log('4. Exit');
 }
+function handleUserInput() {
+    showMenu();
+    rl.question('Choose an option: ', (answer) => {
+        if (answer === '4') {
+            rl.close();
+        } else {
+            handleUserInput();
+        }
+    });
+}
