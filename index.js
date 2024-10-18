@@ -54,3 +54,9 @@ function addNote(index, note) {
         });
     }
 }
+function exportTasks(format) {
+    if (format === 'csv') {
+        return tasks.map(t => `${t.title},${t.completed},${t.priority}`).join('\n');
+    }
+    return JSON.stringify(tasks, null, 2);
+}
