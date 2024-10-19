@@ -60,3 +60,12 @@ function exportTasks(format) {
     }
     return JSON.stringify(tasks, null, 2);
 }
+function importTasks(data, format) {
+    if (format === 'csv') {
+        const lines = data.split('\n');
+        lines.forEach(line => {
+            const [title, completed, priority] = line.split(',');
+            tasks.push({ title, completed: completed === 'true', priority });
+        });
+    }
+}
