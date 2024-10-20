@@ -69,3 +69,11 @@ function importTasks(data, format) {
         });
     }
 }
+function sortTasks(by = 'title') {
+    return [...tasks].sort((a, b) => {
+        if (by === 'dueDate') {
+            return new Date(a.dueDate) - new Date(b.dueDate);
+        }
+        return a[by].localeCompare(b[by]);
+    });
+}
