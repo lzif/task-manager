@@ -77,3 +77,9 @@ function sortTasks(by = 'title') {
         return a[by].localeCompare(b[by]);
     });
 }
+function addTag(index, tag) {
+    if (tasks[index]) {
+        if (!tasks[index].tags) tasks[index].tags = new Set();
+        tasks[index].tags.add(tag);
+    }
+}
