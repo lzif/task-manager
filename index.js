@@ -83,3 +83,9 @@ function addTag(index, tag) {
         tasks[index].tags.add(tag);
     }
 }
+function addDependency(taskIndex, dependsOnIndex) {
+    if (tasks[taskIndex] && tasks[dependsOnIndex]) {
+        if (!tasks[taskIndex].dependencies) tasks[taskIndex].dependencies = [];
+        tasks[taskIndex].dependencies.push(dependsOnIndex);
+    }
+}
