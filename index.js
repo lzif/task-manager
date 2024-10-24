@@ -89,3 +89,8 @@ function addDependency(taskIndex, dependsOnIndex) {
         tasks[taskIndex].dependencies.push(dependsOnIndex);
     }
 }
+function updateProgress(index, progress) {
+    if (tasks[index]) {
+        tasks[index].progress = Math.min(100, Math.max(0, progress));
+    }
+}
