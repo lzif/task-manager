@@ -94,3 +94,9 @@ function updateProgress(index, progress) {
         tasks[index].progress = Math.min(100, Math.max(0, progress));
     }
 }
+function addSubtask(parentIndex, title) {
+    if (tasks[parentIndex]) {
+        if (!tasks[parentIndex].subtasks) tasks[parentIndex].subtasks = [];
+        tasks[parentIndex].subtasks.push({ title, completed: false });
+    }
+}
