@@ -100,3 +100,12 @@ function addSubtask(parentIndex, title) {
         tasks[parentIndex].subtasks.push({ title, completed: false });
     }
 }
+function addComment(index, comment) {
+    if (tasks[index]) {
+        if (!tasks[index].comments) tasks[index].comments = [];
+        tasks[index].comments.push({
+            text: comment,
+            timestamp: new Date().toISOString()
+        });
+    }
+}
