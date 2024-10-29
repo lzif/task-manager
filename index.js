@@ -109,3 +109,9 @@ function addComment(index, comment) {
         });
     }
 }
+function archiveTask(index) {
+    if (tasks[index]) {
+        tasks[index].archived = true;
+        tasks[index].archiveDate = new Date().toISOString();
+    }
+}
