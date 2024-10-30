@@ -115,3 +115,9 @@ function archiveTask(index) {
         tasks[index].archiveDate = new Date().toISOString();
     }
 }
+function addLabel(index, label) {
+    if (tasks[index]) {
+        if (!tasks[index].labels) tasks[index].labels = [];
+        tasks[index].labels.push(label);
+    }
+}
